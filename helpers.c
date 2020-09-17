@@ -39,3 +39,6 @@ int check_dice(int * dice)
      3- incorrect numbers of values
     */
 }
+
+
+// hello this is our first project
