@@ -1,4 +1,7 @@
+#include<string.h>
 #include<stdio.h>
+#include<ctype.h>
+
 
 void display()
 {
@@ -17,7 +20,7 @@ void input_dice(int *dice)
     
 }
 
-
+ 
 // print dice
 void print_dice(int *dice)
 {
@@ -38,6 +41,33 @@ int check_dice(int * dice)
      2- value out of range
      3- incorrect numbers of values
     */
+   int i=0;
+    while(i<5)
+    {
+
+        // if (*dice != 1 || *dice != 2 || *dice != 3 || *dice != 4 || *dice != 5 || *dice != 6)
+        // checking if the given value is numeric or not
+        if(!isdigit(*dice))
+        {
+            return 1;
+        }
+        else
+        {
+            // checking if the given input is in the range 1-6
+            if(*dice>= 1 && *dice<=6 )
+            {
+                return 0;   
+            }
+            else
+            {
+                return 2;
+            }
+            
+        }
+        dice++;
+        i++;
+    }
+
 }
 
 
